@@ -38,8 +38,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            registry-intl.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:latest
-            registry-intl.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:${{ github.sha }}
+            registry-intl.ap-southeast-3.aliyuncs.com/wetix/sqlike-doc:latest
+            registry-intl.ap-southeast-3.aliyuncs.com/wetix/sqlike-doc:${{ github.sha }}
 
       - name: Setup kubectl
         run: |
@@ -55,4 +55,4 @@ jobs:
           echo ${{ secrets.K8S_KEY }} | base64 --decode --ignore-garbage > /tmp/config
           export KUBECONFIG=/tmp/config
           kubectl apply -f app.yaml
-          kubectl set image deployment sqlike-doc sqlike-doc=registry-intl-vpc.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:${{ github.sha }} --namespace=default
+          kubectl set image deployment sqlike-doc sqlike-doc=registry-intl-vpc.ap-southeast-3.aliyuncs.com/wetix/sqlike-doc:${{ github.sha }} --namespace=default

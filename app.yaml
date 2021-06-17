@@ -10,7 +10,7 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 3000
+      targetPort: 80
   type: NodePort
   selector:
     app: sqlike-doc
@@ -34,10 +34,10 @@ spec:
     spec:
       containers:
         - name: sqlike-doc
-          image: registry-intl-vpc.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:latest
+          image: registry-intl-vpc.ap-southeast-3.aliyuncs.com/wetix/sqlike-doc:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 80
       imagePullSecrets:
         - name: regsecret
       terminationGracePeriodSeconds: 60
