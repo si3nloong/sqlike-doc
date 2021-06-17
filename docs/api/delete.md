@@ -33,7 +33,7 @@ func main() {
 
 ```
 
-## Delete Single Record with Primary Key
+## Delete Single Record using Primary Key
 
 ```go
 user := User{
@@ -78,3 +78,9 @@ func main() {
     }
 }
 ```
+
+:::caution Beware
+
+`Delete` without condition (where clause) will throw error.
+
+:::
