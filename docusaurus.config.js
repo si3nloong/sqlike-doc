@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Sqlike",
+  title: "SQLike",
   tagline:
     "A golang SQL ORM which anti toxic query and focus on latest features.",
   url: "https://sqlike.com",
@@ -12,7 +12,7 @@ module.exports = {
   projectName: "docusaurus", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Sqlike",
+      title: "SQLike",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -75,7 +75,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sqlike, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SQLike. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -88,12 +88,12 @@ module.exports = {
           editUrl:
             "https://github.com/facebook/docusaurus/edit/master/website/",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+        // },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
