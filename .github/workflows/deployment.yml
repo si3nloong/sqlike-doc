@@ -32,11 +32,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        if: env.GITHUB_REF_SLUG == 'master'
         uses: docker/build-push-action@v2
         with:
           context: .
-          # file: "apps/web/Dockerfile"
           platforms: linux/amd64
           push: true
           tags: |
@@ -57,4 +55,4 @@ jobs:
           echo ${{ secrets.K8S_KEY }} | base64 --decode --ignore-garbage > /tmp/config
           export KUBECONFIG=/tmp/config
           kubectl apply -f app.yaml
-          kubectl set image deployment wetix-web wetix-web=registry-intl-vpc.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:${{ github.sha }} --namespace=default
+          kubectl set image deployment sqlike-doc sqlike-doc=registry-intl-vpc.ap-southeast-3.aliyuncs.com/sqlike/sqlike-doc:${{ github.sha }} --namespace=default
