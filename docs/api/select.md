@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # SELECT
@@ -15,7 +15,7 @@ user := User{
 
 result, err := client.
     Database("sqlike").
-    Table("users").
+    Table("Users").
     InsertOne(context.Background(), &user)
 if err != nil {
     panic(err)
@@ -33,7 +33,7 @@ users := []User{
 
 result, err := client.
     Database("sqlike").
-    Table("users").
+    Table("Users").
     Insert(context.Background(), &users)
 if err != nil {
     panic(err)

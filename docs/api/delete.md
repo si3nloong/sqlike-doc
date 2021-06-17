@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
-# UPDATE
+# DELETE
 
-## Update Single Record
+## Delete Single Record
 
 ```go
 import (
@@ -18,15 +18,12 @@ import (
 func main() {
     result, err := client.
         Database("sqlike").
-        Table("users").
-        UpdateOne(
+        Table("Users").
+        DeleteOne(
             context.Background(),
-            actions.UpdateOne().
+            actions.DeleteOne().
                 Where(
                     expr.Equal("ID", 123),
-                ).
-                Set(
-                    expr.ColumnValue("Age", 18),
                 ),
         )
     if err != nil {
@@ -36,7 +33,7 @@ func main() {
 
 ```
 
-## Update Single Record with Primary Key
+## Delete Single Record with Primary Key
 
 ```go
 user := User{
@@ -47,14 +44,14 @@ user := User{
 
 result, err := client.
     Database("sqlike").
-    Table("users").
-    ModifyOne(context.Background(), &user)
+    Table("Users").
+    DestroyOne(context.Background(), &user)
 if err != nil {
     panic(err)
 }
 ```
 
-## Update Multiple Record
+## Delete Multiple Record
 
 ```go
 import (
@@ -68,15 +65,12 @@ import (
 func main() {
     result, err := client.
         Database("sqlike").
-        Table("users").
-        Update(
+        Table("Users").
+        Delete(
             context.Background(),
-            actions.Update().
+            actions.Delete().
                 Where(
                     expr.Equal("Status", "frozen"),
-                ).
-                Set(
-                    expr.ColumnValue("Age", 18),
                 ),
         )
     if err != nil {
