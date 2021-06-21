@@ -33,7 +33,7 @@ func main() {
 
 ## Virtual Columns
 
-Use keyword `virtual_column` in field tag to let **sqlike** create virtual column for your table column.
+Use keyword `virtual_column` in field tag to create virtual column.
 
 ```go
 type User struct{
