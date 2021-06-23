@@ -11,7 +11,7 @@ import (
     "github.com/si3nloong/sqlike/plugin/opentracing"
     "github.com/si3nloong/sqlike/sql/instrumented"
 
-    "github.com/si3nloong/sqlike/sqlike"
+    "github.com/si3nloong/sqlike"
 )
 
 func main() {
