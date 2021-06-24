@@ -8,7 +8,7 @@ sidebar_position: 5
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sqlike/actions"
     "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
@@ -55,7 +55,7 @@ if err != nil {
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sqlike/actions"
     "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
