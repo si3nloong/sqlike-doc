@@ -18,9 +18,9 @@ Value after prefix of `sqlike` always a column name. To define multiple tag valu
 | `charset`          | yes            | `string`        | set column character set                                     |
 | `collate`          | yes            | `string`        | set column collation                                         |
 | `auto_increment`   | no             | -               | set column as auto increment, mainly for primary key purpose |
-| `set`              | yes            | `[]string`      | set column to `SET` data type and available values           |
-| `enum`             | yes            | `[]string`      | set column to `ENUM` data type and available values          |
-| `longtext`         | no             | -               | set column to `LONGTEXT` data type                           |
+| `set`              | yes            | `[]string`      | set column to **SET** data type and available values         |
+| `enum`             | yes            | `[]string`      | set column to **ENUM** data type and available values        |
+| `longtext`         | no             | -               | set column to **LONGTEXT** data type                         |
 | `unsigned`         | no             | -               | set column to unsigned (Only applicable to number data type) |
 | `default`          | yes            | `any`           | set column default value                                     |
 
