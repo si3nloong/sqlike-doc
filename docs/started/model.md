@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Model
 
-Value after prefix of `sqlike` always a column name. To define multiple tag value, you can use **comma** to separate it.
+Value after prefix of keyword `sqlike` always a column name. To define multiple tag value, you can use **comma** to separate it.
 
 | Field Tag          | Value Required | Value Data Type | Description                                                  |
 | ------------------ | -------------- | --------------- | ------------------------------------------------------------ |

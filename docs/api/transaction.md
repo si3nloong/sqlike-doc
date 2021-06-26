@@ -7,8 +7,25 @@ sidebar_position: 7
 ### Handle transaction manually
 
 ```go
+tx, err := db.BeginTransaction(ctx)
+if err != nil {
+    panic(err)
+}
 
+if err := tx.Table("Users").FindOne(
+    ctx,
+    actions.FindOne().
+        Where(
+            expr.Equal("ID", "123"),
+        ),
+).Decode(&User{}); err != nil {
+    // rollback transaction once it hit error
+    tx.RollbackTransaction()
+    panic(err)
+}
 
+// commit transaction
+tx.CommitTransaction()
 ```
 
 ### Handle transaction within scope

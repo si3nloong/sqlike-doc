@@ -120,6 +120,12 @@ Remember to call `Close` once you no longer need the result, else it will lead t
 
 :::
 
+## Pagination
+
+### Offset pagination
+
+### Cursor based pagination
+
 ## FAQs
 
 I see there have a lot of similar api, such as `Scan`, `Slice`, `All` and many more, what exactly is them?
