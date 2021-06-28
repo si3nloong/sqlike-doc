@@ -1,0 +1,9 @@
+{
+  "tutorialSidebar": [
+    {
+      "type": "category",
+      "label": "Tutorial",
+      "items": ["Intro"]
+    }
+  ]
+}
