@@ -9,7 +9,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "si3nloong", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  projectName: "sqlike", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "SQLike",
@@ -19,12 +19,25 @@ module.exports = {
       },
       items: [
         {
+          label: 'Version 2.0.0',
+          position: 'right',
+          items: [
+            {
+              label: '2.0.0',
+              href: '/docs/intro',
+            },
+            {
+              label: '1.6.1',
+              href: '/docs/1.6.1/intro',
+            },
+          ],
+        },
+        {
           type: "doc",
           docId: "intro",
           position: "right",
           label: "Docs",
         },
-        // { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/si3nloong/sqlike",
           label: "GitHub",
@@ -36,10 +49,18 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Learn",
           items: [
             {
-              label: "Tutorial",
+              label: "Introduction",
+              to: "/docs/intro",
+            },
+            {
+              label: "Installation",
+              to: "/docs/intro",
+            },
+            {
+              label: "Migration from v1 to v2",
               to: "/docs/intro",
             },
           ],
@@ -86,7 +107,7 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
+            "https://github.com/si3nloong/sqlike",
         },
         // blog: {
         //   showReadingTime: true,
