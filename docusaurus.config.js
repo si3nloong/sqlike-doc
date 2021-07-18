@@ -1,3 +1,4 @@
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "SQLike",
@@ -19,18 +20,9 @@ module.exports = {
       },
       items: [
         {
-          label: 'Version 2.0.0',
-          position: 'right',
-          items: [
-            {
-              label: '2.0.0',
-              href: '/docs/intro',
-            },
-            {
-              label: '1.6.1',
-              href: '/docs/1.6.1/intro',
-            },
-          ],
+          type: "docsVersionDropdown",
+          position: "right",
+          dropdownActiveClassDisabled: true,
         },
         {
           type: "doc",
@@ -106,8 +98,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/si3nloong/sqlike",
+          editUrl: "https://github.com/si3nloong/sqlike",
         },
         // blog: {
         //   showReadingTime: true,
