@@ -8,16 +8,16 @@ module.exports = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  // favicon: "img/favicon.ico",
   organizationName: "si3nloong", // Usually your GitHub org/user name.
   projectName: "sqlike", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "SQLike",
-      logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
-      },
+      // logo: {
+      //   alt: "My Site Logo",
+      //   src: "img/logo.svg",
+      // },
       items: [
         {
           type: "docsVersionDropdown",
