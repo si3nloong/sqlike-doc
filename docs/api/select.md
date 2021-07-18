@@ -14,7 +14,7 @@ Select single record from a table and map to pointer of struct.
 import (
     "context"
     "database/sql"
-    "github.com/si3nloong/sqlike/sqlike/actions"
+    "github.com/si3nloong/sqlike/actions"
     "github.com/si3nloong/sqlike/sql/expr"
 )
 

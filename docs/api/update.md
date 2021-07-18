@@ -8,7 +8,7 @@ sidebar_position: 4
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/sqlike/actions"
+    "github.com/si3nloong/sqlike/actions"
     "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
