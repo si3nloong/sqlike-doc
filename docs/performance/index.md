@@ -31,6 +31,7 @@ sidebar_position: 1
 ```yaml title="index.yaml"
 # Index `Name` column with descending order
 - table: User
+  type: fulltext
   columns:
     - name: Name
       direction: desc
@@ -50,7 +51,7 @@ sidebar_position: 1
 
 ```yaml title="index.yaml"
 - table: User
-  type: spatial
+  type: multi-valued
   columns:
     - name: Location
 ```
