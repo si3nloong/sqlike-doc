@@ -1,4 +1,3 @@
-
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "SQLike",
