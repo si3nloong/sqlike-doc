@@ -8,8 +8,8 @@ sidebar_position: 1
 import (
     "context"
     "github.com/go-sql-driver/mysql"
-    "github.com/si3nloong/sqlike/plugin/opentracing"
-    "github.com/si3nloong/sqlike/sql/instrumented"
+    "github.com/si3nloong/sqlike/v2/plugin/opentracing"
+    "github.com/si3nloong/sqlike/v2/sql/instrumented"
 
     "github.com/si3nloong/sqlike"
 )

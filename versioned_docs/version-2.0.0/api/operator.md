@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/sql/expr"
+    "github.com/si3nloong/sqlike/v2/sql/expr"
 )
 ```
 

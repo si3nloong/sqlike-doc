@@ -12,8 +12,8 @@ if err != nil {
     panic(err)
 }
 
-if err := tx.Table("Users").FindOne(
-    ctx,
+if err := db.Table("Users").FindOne(
+    tx,
     actions.FindOne().
         Where(
             expr.Equal("ID", "123"),
@@ -38,7 +38,7 @@ user := User{}
 client.RunInTransaction(
     context.Background(),
     func(sess sqlike.SessionContext) error {
-        if err := sess.Table("Users").FindOne(
+        if err := db.Table("Users").FindOne(
             sess,
             actions.FindOne().
                 Where(
