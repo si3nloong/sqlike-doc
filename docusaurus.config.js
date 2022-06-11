@@ -1,114 +1,128 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
-  title: "SQLike",
-  tagline:
-    "A golang SQL ORM which anti toxic query and focus on latest features.",
-  url: "https://sqlike.com",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  // favicon: "img/favicon.ico",
-  organizationName: "si3nloong", // Usually your GitHub org/user name.
-  projectName: "sqlike", // Usually your repo name.
-  themeConfig: {
-    navbar: {
-      title: "SQLike",
-      // logo: {
-      //   alt: "My Site Logo",
-      //   src: "img/logo.svg",
-      // },
-      items: [
-        {
-          type: "docsVersionDropdown",
-          position: "right",
-          dropdownActiveClassDisabled: true,
-        },
-        {
-          type: "doc",
-          docId: "intro",
-          position: "right",
-          label: "Docs",
-        },
-        {
-          href: "https://github.com/si3nloong/sqlike",
-          label: "GitHub",
-          position: "right",
-        },
-      ],
-    },
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Learn",
-          items: [
-            {
-              label: "Introduction",
-              to: "/docs/intro",
-            },
-            {
-              label: "Installation",
-              to: "/docs/intro",
-            },
-            {
-              label: "Migration from v1 to v2",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        // {
-        //   title: "Community",
-        //   items: [
-        //     {
-        //       label: "Stack Overflow",
-        //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-        //     },
-        //     {
-        //       label: "Discord",
-        //       href: "https://discordapp.com/invite/docusaurus",
-        //     },
-        //     {
-        //       label: "Twitter",
-        //       href: "https://twitter.com/docusaurus",
-        //     },
-        //   ],
-        // },
-        {
-          title: "More",
-          items: [
-            // {
-            //   label: "Blog",
-            //   to: "/blog",
-            // },
-            {
-              label: "GitHub",
-              href: "https://github.com/si3nloong/sqlike",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} SQLike. Built with Docusaurus.`,
-    },
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'sqlike',
+  tagline: 'Elegent SQL ORM in Go.',
+  url: 'https://sqlike.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'si3nloong', // Usually your GitHub org/user name.
+  projectName: 'sqlike', // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
   },
+
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: "https://github.com/si3nloong/sqlike",
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     "https://github.com/facebook/docusaurus/edit/master/website/blog/",
-        // },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
-      },
+      }),
     ],
   ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: 'My Site',
+        logo: {
+          alt: 'My Site Logo',
+          src: 'img/logo.svg',
+        },
+        items: [
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Tutorial',
+          },
+          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Tutorial',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/si3nloong/sqlike',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} sqlike.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
 };
+
+module.exports = config;
