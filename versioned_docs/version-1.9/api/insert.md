@@ -67,7 +67,7 @@ if err != nil {
 import (
     "context"
     "time"
-    "github.com/si3nloong/sqlike/v2/options"
+    "github.com/si3nloong/sqlike/options"
 )
 
 user := User{
@@ -98,7 +98,7 @@ if err != nil {
 import (
     "context"
     "time"
-    "github.com/si3nloong/sqlike/v2/options"
+    "github.com/si3nloong/sqlike/options"
 )
 
 user := User{

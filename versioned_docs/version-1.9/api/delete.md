@@ -8,8 +8,8 @@ sidebar_position: 5
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
+    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
     _ "github.com/go-sql-driver/mysql"
@@ -55,8 +55,8 @@ if err != nil {
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
+    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
     _ "github.com/go-sql-driver/mysql"

@@ -1,15 +1,15 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
-# DELETE
+# UPDATE
 
-## Delete Single Record
+## Update Single Record
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
+    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
     _ "github.com/go-sql-driver/mysql"
@@ -19,11 +19,14 @@ func main() {
     result, err := client.
         Database("sqlike").
         Table("Users").
-        DeleteOne(
+        UpdateOne(
             context.Background(),
-            actions.DeleteOne().
+            actions.UpdateOne().
                 Where(
                     expr.Equal("ID", 123),
+                ).
+                Set(
+                    expr.ColumnValue("Age", 18),
                 ),
         )
     if err != nil {
@@ -33,7 +36,7 @@ func main() {
 
 ```
 
-## Delete Single Record using Primary Key
+## Update Single Record with Primary Key
 
 ```go
 user := User{
@@ -45,18 +48,18 @@ user := User{
 result, err := client.
     Database("sqlike").
     Table("Users").
-    DestroyOne(context.Background(), &user)
+    ModifyOne(context.Background(), &user)
 if err != nil {
     panic(err)
 }
 ```
 
-## Delete Multiple Record
+## Update Multiple Record
 
 ```go
 import (
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
+    "github.com/si3nloong/sqlike/sqlike/actions"
+    "github.com/si3nloong/sqlike/sql/expr"
     "context"
 
     _ "github.com/go-sql-driver/mysql"
@@ -66,11 +69,14 @@ func main() {
     result, err := client.
         Database("sqlike").
         Table("Users").
-        Delete(
+        Update(
             context.Background(),
-            actions.Delete().
+            actions.Update().
                 Where(
                     expr.Equal("Status", "frozen"),
+                ).
+                Set(
+                    expr.ColumnValue("Age", 18),
                 ),
         )
     if err != nil {
@@ -78,9 +84,3 @@ func main() {
     }
 }
 ```
-
-:::caution Beware
-
-`Delete` without condition (where clause) will throw error.
-
-:::

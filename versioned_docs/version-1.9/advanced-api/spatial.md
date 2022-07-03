@@ -8,8 +8,8 @@ sidebar_position: 3
 import (
     "context"
     "github.com/paulmach/orb"
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
+    "github.com/si3nloong/sqlike/actions"
+    "github.com/si3nloong/sqlike/sql/expr"
 )
 
 /*

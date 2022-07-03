@@ -7,15 +7,6 @@ sidebar_position: 7
 ### Handle transaction manually
 
 ```go
-import (
-    "context"
-
-    "github.com/si3nloong/sqlike/v2"
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
-)
-
-ctx := context.Background()
 tx, err := db.BeginTransaction(ctx)
 if err != nil {
     panic(err)
@@ -42,15 +33,6 @@ tx.CommitTransaction()
 > Transaction will proceed if `error` return from scope is `nil`, else it will rollback.
 
 ```go
-import (
-    "context"
-
-    "github.com/si3nloong/sqlike/v2"
-    "github.com/si3nloong/sqlike/v2/actions"
-    "github.com/si3nloong/sqlike/v2/options"
-    "github.com/si3nloong/sqlike/v2/sql/expr"
-)
-
 user := User{}
 
 client.RunInTransaction(

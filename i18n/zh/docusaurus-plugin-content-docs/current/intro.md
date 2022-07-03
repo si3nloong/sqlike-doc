@@ -9,7 +9,7 @@ sidebar_position: 1
 ## Installation
 
 ```console
-go get github.com/si3nloong/sqlike/v2
+go get github.com/si3nloong/sqlike
 ```
 
 ## Legacy Support
