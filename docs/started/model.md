@@ -4,7 +4,13 @@ sidebar_position: 1
 
 # Model
 
-Value after prefix of keyword `sqlike` always a column name. To define multiple tag value, you can use **comma** to separate it.
+SQLike accept multiple scheme key values, the available one are **db**, **sql**, or **sqlike**.
+
+<img src="/img/schema_structure.png" />
+
+The value after the scheme is always a **column name**. To define multiple modifiers, you can use **comma** to separate them.
+
+## Column Modifiers
 
 | Field Tag          | Value Required | Value Data Type | Description                                                  |
 | ------------------ | -------------- | --------------- | ------------------------------------------------------------ |
@@ -12,6 +18,7 @@ Value after prefix of keyword `sqlike` always a column name. To define multiple 
 | `size`             | yes            | `integer`       | set column length                                            |
 | `comment`          | yes            | `string`        | set column comment                                           |
 | `primary_key`      | no             | -               | set column as primary key                                    |
+| `foreign_key`      | no             | -               | set column as foreign key                                    |
 | `generated_column` | no             | -               | column length                                                |
 | `virtual_column`   | no             | `string`        | make column as virtual column                                |
 | `stored_column`    | no             | `string`        | make column as stored column                                 |

@@ -8,7 +8,7 @@ The **SELECT** statement is used to select data from a table.
 
 ## Find Single Record
 
-Select single record from a table and map to pointer of struct.
+Select single record from a table.
 
 ```go
 import (

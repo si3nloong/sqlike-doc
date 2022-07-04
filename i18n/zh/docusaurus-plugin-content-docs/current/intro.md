@@ -6,7 +6,7 @@ sidebar_position: 1
 
 > A golang SQL ORM which anti toxic query and focus on latest features.
 
-## Installation
+## 安装
 
 ```console
 go get github.com/si3nloong/sqlike
