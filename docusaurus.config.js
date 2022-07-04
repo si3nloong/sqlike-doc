@@ -51,9 +51,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "SQLike",
         logo: {
-          alt: "My Site Logo",
+          alt: "sqlike",
           src: "img/logo.svg",
         },
         items: [
