@@ -6,7 +6,7 @@ sidebar_position: 1
 
 SQLike accept multiple scheme key values, the available one are **db**, **sql**, or **sqlike**.
 
-<img src="/img/schema_structure.png" />
+<img src="/img/schema_structure.svg" />
 
 The value after the scheme is always a **column name**. To define multiple modifiers, you can use **comma** to separate them.
 
